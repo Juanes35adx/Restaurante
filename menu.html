@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú | La Marquesa</title>
+<link rel="stylesheet" href="menu.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+<h1>Menú - La Marquesa</h1>
+<a href="index.html" class="volver">Volver</a>
+</header>
+
+<section class="menu-container">
+
+<div class="plato" onclick="abrirModal('Bandeja Paisa','Plato tradicional con frijoles, arroz, carne, chicharrón, huevo, arepa y aguacate','$45.000','img/comida1.jpg')">
+<img src="img/comida1.jpg">
+<h3>Bandeja Paisa</h3>
+<p>$45.000</p>
+</div>
+
+<div class="plato" onclick="abrirModal('Arepas Rellenas','Arepas artesanales con carne desmechada y queso','$22.000','img/comida2.jpg')">
+<img src="img/comida2.jpg">
+<h3>Arepas Rellenas</h3>
+<p>$22.000</p>
+</div>
+
+<div class="plato" onclick="abrirModal('Hamburguesa Especial','Hamburguesa artesanal con papas','$30.000','img/comida3.jpg')">
+<img src="img/comida3.jpg">
+<h3>Hamburguesa</h3>
+<p>$30.000</p>
+</div>
+
+</section>
+
+<div id="modal" class="modal">
+<div class="modal-content">
+<span class="cerrar" onclick="cerrarModal()">×</span>
+<img id="modal-img">
+<h2 id="modal-titulo"></h2>
+<p id="modal-desc"></p>
+<h3 id="modal-precio"></h3>
+</div>
+</div>
+
+<script src="menu.js"></script>
+
+</body>
+</html>

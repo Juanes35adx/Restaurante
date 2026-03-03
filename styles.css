@@ -21,6 +21,7 @@ background:#020617;
 position:sticky;
 top:0;
 z-index:1000;
+transition:0.3s;
 }
 
 .nav{
@@ -50,23 +51,61 @@ text-decoration:none;
 }
 
 .hero{
-height:90vh;
-background:url("img/comida1.jpg") center/cover;
+min-height:90vh;
+background:url("img/comida1.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+position: relative;
 }
 
-.hero-content{
-background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:10px;
+.hero::after{
+content:"";
+position:absolute;
+bottom:-1px;
+left:0;
+width:100%;
+height:220px;
+background:linear-gradient(
+to bottom,
+rgba(15,23,42,0) 0%,
+rgba(15,23,42,0.4) 40%,
+#020617 100%
+);
 }
 
-.hero h2{
-font-size:3rem;
-margin-bottom:10px;
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  background:rgba(0,0,0,0.45);
+  border-radius:12px;
+  animation: aparecer 1.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.hero-content h1{
+margin-bottom:15px;
+}
+
+.hero-content p{
+margin-bottom:20px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-primary{
@@ -76,6 +115,11 @@ border-radius:8px;
 color:black;
 text-decoration:none;
 margin-right:10px;
+transition:0.25s;
+}
+
+.btn-primary:hover{
+transform:scale(1.05);
 }
 
 .btn-secondary{
@@ -84,6 +128,13 @@ padding:14px 25px;
 border-radius:8px;
 text-decoration:none;
 color:white;
+transition:0.25s;
+}
+
+.btn-secondary:hover{
+background:#f59e0b;
+color:black;
+border-color:#f59e0b;
 }
 
 .menu{
@@ -102,11 +153,18 @@ margin-top:40px;
 background:#111827;
 padding:25px;
 border-radius:12px;
-transition:.3s;
+transition:0.35s;
+cursor:pointer;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+nav a:hover{
+color:#f59e0b;
 }
 
 .gallery{
@@ -166,22 +224,66 @@ padding:30px;
 background:#020617;
 }
 
-.whatsapp{
+.social-buttons{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
-padding:15px 20px;
-border-radius:50px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:1000;
+}
+
+.whatsapp-btn,
+.instagram-btn{
+padding:12px 18px;
+border-radius:30px;
 color:white;
+font-weight:600;
 text-decoration:none;
+transition:0.3s;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn{
+background:#25D366;
+}
+
+.instagram-btn{
+background:#E4405F;
+}
+
+.whatsapp-btn:hover,
+.instagram-btn:hover{
+transform:scale(1.05);
 }
 
 .call-mobile{
 display:none;
 }
 
+section{
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+
 @media (max-width:768px){
+
+.hero{
+background-attachment: fixed;
+}
 
 .contact-grid{
 grid-template-columns:1fr;
