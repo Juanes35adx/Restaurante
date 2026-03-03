@@ -3,93 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Marquesa Restaurante | La Estrella</title>
+<title>La Marquesa Restaurante</title>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
+<header class="header">
 <div class="container nav">
 <h1 class="logo">La Marquesa</h1>
+
 <nav>
 <a href="#menu">Menú</a>
 <a href="#galeria">Galería</a>
-<a href="#reseñas">Reseñas</a>
 <a href="#contacto">Contacto</a>
 </nav>
-<a class="call-btn" href="tel:+573137771127">Llamar</a>
+
+<a class="call-btn" href="tel:+573137771127">Reservar</a>
 </div>
 </header>
 
 <section class="hero">
-<div class="hero-overlay"></div>
 <div class="hero-content">
-<h2>Una experiencia gastronómica en La Estrella</h2>
-<p>Comida deliciosa, ambiente elegante y el mejor servicio.</p>
+<h2>El sabor auténtico de Antioquia</h2>
+<p>Disfruta una experiencia gastronómica única en La Estrella</p>
+
 <div class="hero-buttons">
 <a href="tel:+573137771127" class="btn-primary">Llamar ahora</a>
-<a href="#contacto" class="btn-secondary">Reservar mesa</a>
+<a href="#menu" class="btn-secondary">Ver menú</a>
 </div>
 </div>
 </section>
 
-<section class="about">
-<div class="container">
-<h2>Sobre Nosotros</h2>
+<section class="about container reveal">
+<h2>Bienvenido a La Marquesa</h2>
 <p>
-La Marquesa Restaurante ofrece una experiencia gastronómica única en La Estrella.
-Nuestro menú combina tradición, sabor y una atmósfera acogedora perfecta para
-familias, parejas y celebraciones especiales.
+Un restaurante donde la tradición, el sabor y el buen ambiente se unen.
+Perfecto para familias, amigos y celebraciones.
 </p>
-</div>
 </section>
 
 <section id="menu" class="menu">
 <div class="container">
-<h2>Platos Destacados</h2>
+<h2>Nuestros platos</h2>
 
 <div class="menu-grid">
-<div class="menu-item">Bandeja Paisa</div>
-<div class="menu-item">Menú del día</div>
-<div class="menu-item">Arepas rellenas</div>
-<div class="menu-item">Hamburguesas</div>
-<div class="menu-item">Pizzas artesanales</div>
-<div class="menu-item">Tostones de plátano</div>
-<div class="menu-item">Albondigas</div>
-<div class="menu-item">Jugos naturales</div>
+
+<div class="card">
+<h3>Bandeja Paisa</h3>
+<p>Plato tradicional colombiano lleno de sabor.</p>
 </div>
 
+<div class="card">
+<h3>Menú del día</h3>
+<p>Opciones frescas todos los días.</p>
+</div>
+
+<div class="card">
+<h3>Arepas rellenas</h3>
+<p>Arepas artesanales con ingredientes frescos.</p>
+</div>
+
+<div class="card">
+<h3>Hamburguesas</h3>
+<p>Jugosas y preparadas al momento.</p>
+</div>
+
+<div class="card">
+<h3>Pizzas</h3>
+<p>Pizzas horneadas con masa artesanal.</p>
+</div>
+
+<div class="card">
+<h3>Jugos naturales</h3>
+<p>Refrescantes bebidas naturales.</p>
+</div>
+
+</div>
 </div>
 </section>
 
-<section id="galeria" class="gallery">
-<div class="container">
+<section id="galeria" class="gallery container">
 <h2>Galería</h2>
 
 <div class="gallery-grid">
 <img src="img/comida1.jpg">
 <img src="img/comida2.jpg">
 <img src="img/comida3.jpg">
-</div>
-
-</div>
-</section>
-
-<section id="reseñas" class="reviews">
-<div class="container">
-<h2>Opiniones de Clientes</h2>
-
-<div class="review-card">
-⭐ 4.5 / 5 basado en más de 400 opiniones
-</div>
-
-<div class="review">
-“El ambiente es encantador, el servicio excelente y la comida excepcional.”
-</div>
-
 </div>
 </section>
 
@@ -103,17 +106,13 @@ familias, parejas y celebraciones especiales.
 <input type="tel" placeholder="Teléfono" required>
 <input type="number" placeholder="Personas" required>
 <textarea placeholder="Mensaje"></textarea>
-<button type="submit">Enviar solicitud</button>
+<button type="submit">Enviar</button>
 </form>
 </div>
 
 <div>
 <h2>Ubicación</h2>
 <p>Calle 81 sur 60 - 29<br>La Estrella, Antioquia</p>
-
-<a class="btn-maps" href="https://www.webild.io/preview/4ec04436-061a-4430-be5b-03ad17ecf239" target="_blank">
-Ver en Google Maps
-</a>
 
 <iframe
 src="https://maps.google.com/maps?q=La%20Estrella%20Antioquia&t=&z=13&ie=UTF8&iwloc=&output=embed">
@@ -126,13 +125,14 @@ src="https://maps.google.com/maps?q=La%20Estrella%20Antioquia&t=&z=13&ie=UTF8&iw
 
 <footer>
 <p>© 2026 La Marquesa Restaurante</p>
-<a href="https://www.instagram.com/lamarquesa_restaurante/?hl=es" target="_blank">
-Instagram
-</a>
+<a href="https://www.instagram.com/lamarquesa_restaurante/?hl=es">Instagram</a>
 </footer>
 
 <a href="https://wa.me/573137771127" class="whatsapp">WhatsApp</a>
 
+<a href="tel:+573137771127" class="call-mobile">Llamar</a>
+
 <script src="script.js"></script>
+
 </body>
 </html>
